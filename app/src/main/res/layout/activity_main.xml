@@ -32,6 +32,7 @@
 
 
     <EditText
+        android:inputType="phone"
         android:hint="Mobile number"
         android:id="@+id/number"
         android:layout_margin="16dp"
@@ -68,6 +69,19 @@
         android:layout_margin="16dp" />
 
 
+
+    <TextView
+        android:textColor="#f00"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:visibility="invisible"
+        android:text="Invalid mobile number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorMessages"
+        app:layout_constraintTop_toBottomOf="@id/submitButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,6 +45,13 @@ public class LocationThing extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         })
+                        .setNeutralButton("Call instead", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + relativeMobileNo));
+                                startActivity(intent);
+                            }
+                        })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -74,6 +81,13 @@ public class LocationThing extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         })
+                        .setNeutralButton("Call instead", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + relativeMobileNo));
+                                startActivity(intent);
+                            }
+                        })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -99,6 +113,13 @@ public class LocationThing extends AppCompatActivity {
                                 Uri uri = Uri.parse("smsto:" + relativeMobileNo);
                                 Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
                                 intent.putExtra("sms_body", "Your family member"+userName +" is in danger. To know the exact location, click the Google Maps link\n\nhttps://www.google.com/maps/@17.4836143,78.4401258,15z");
+                                startActivity(intent);
+                            }
+                        })
+                        .setNeutralButton("Call instead", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + relativeMobileNo));
                                 startActivity(intent);
                             }
                         })
